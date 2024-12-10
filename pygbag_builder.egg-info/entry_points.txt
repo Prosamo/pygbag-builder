@@ -1,0 +1,2 @@
+[console_scripts]
+pygbag_builder = pygbag_builder.main_flow:main
