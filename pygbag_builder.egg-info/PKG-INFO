@@ -32,6 +32,7 @@ pip install pygbag_builder
 ```
 
 ## How To
+### step1
 You should make folder for your project at first. The main file must be `main.py` and contain main function. 
 
 These are sample programs. `main.py` can import other `.py`files. The only thing that you should care about is to make main function.
@@ -82,7 +83,7 @@ def loop():
     while True:
         break
 ```
-
+### step2
 please use this command in your project folder
 ```sh
 pygbag_builder main_flow
@@ -149,9 +150,23 @@ async def loop():
         break
 ```
 
-Also, this command creates 'pygbag.yml' in your project folder(.github/workflows/pygbag.yml)
+Also, this command creates 'pygbag.yml'(.github/workflows/pygbag.yml)
+
+These files are put in `pygbag_builder_build` folder which created in your project folder.
+
+### step3
+Now, you have all the necessary files to upload your game, you can create a repository by following these steps
+
+https://pygame-web.github.io/wiki/publishing/github.io/
+
+#### summary
+- run pygbag_build from Action
+- set gh-pages to branch from Settings → pages
 
 
 
 ## License
 This project follows MIT. If you need more information, please look at `LICENSE`.
+
+## pygbag
+https://pypi.org/project/pygbag/
