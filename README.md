@@ -143,16 +143,14 @@ Now, you have all the necessary files to upload your game, you can create a repo
 
 https://pygame-web.github.io/wiki/publishing/github.io/
 
-If you want to test on https://localhost:8000 before uploading your game, you can use this command.
-```sh
-pygbag pygbag_builder_build
-```
-
 #### summary
 - run pygbag_build from Action
 - set gh-pages to branch from Settings → pages
 
-
+If you want to test on https://localhost:8000 before uploading your game, you can use this command.
+```sh
+pygbag pygbag_builder_build
+```
 
 ## License
 This project follows MIT. If you need more information, please look at `LICENSE`.
