@@ -5,6 +5,8 @@ pygbag_builder/insert_await.py
 pygbag_builder/insert_sleep.py
 pygbag_builder/main_flow.py
 pygbag_builder/make_dir.py
+pygbag_builder/make_repo.py
+pygbag_builder/set_page.py
 pygbag_builder.egg-info/PKG-INFO
 pygbag_builder.egg-info/SOURCES.txt
 pygbag_builder.egg-info/dependency_links.txt

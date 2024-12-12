@@ -16,7 +16,7 @@ pip install pygbag_builder
 ```
 
 ## How To
-### step1
+### preparation
 You should make folder for your project at first. The main file must be `main.py` and contain main function. 
 
 These are sample programs. `main.py` can import other `.py`files. The only thing that you should care about is to make main function.
@@ -67,10 +67,18 @@ def loop():
     while True:
         break
 ```
-### step2
+### commands
+`pygbag_builder` offers these three commands
+- pygbag_builder
+- pygbag_builder_make_repo
+- pygbag_builder_set_page
+
+#### pygbag_builder
+This is a command to create needed files for pygbag.
+
 please use this command in your project folder
 ```sh
-pygbag_builder main_flow
+pygbag_builder
 ```
 
 By using this command, your python files are automatically modified like this.
@@ -134,23 +142,63 @@ async def loop():
         break
 ```
 
+:::note warn
+This part may not work compleately in complex program. In that case, please modify some parts manually.
+:::
+
 Also, this command creates 'pygbag.yml'(.github/workflows/pygbag.yml)
 
 These files are put in `pygbag_builder_build` folder which created in your project folder.
 
-### step3
-Now, you have all the necessary files to upload your game, you can create a repository by following these steps
+#### pygbag_builder_make_repo
+This is a command to make repository automatically. **It uses GitHub API so you need GitHub token**. This command not only make repository but also runs workflow(pygbag_build).So, You Don't have to change settings. Instead, you have to get GitHub token with necessary permissions. You can get your token from Developer settings in Settings of your account.
+
+**>Personal access tokens**
+[Repository access]
+   Public Repositories (read-only)
+=> All repositories
+   Only select repositories
+
+[Permissions]
+These permissions must be `Read and Write`
+- Actions
+- Administration
+- Contents
+- Pages
+- Webhooks
+- Workflows 
+
+please use this command in your project folder
+```sh
+pygbag_builder_make_repo
+```
+:::note warn
+Depending on the timing of the process, sometimes the workflow may not execute properly, In that case, run this command again. You will get an error because the repository already exist, but no problem. Or you can run `pygbag_build` manually from Action.
+:::
+
+If you don't want to use token. You have to create repository manually.
 
 https://pygame-web.github.io/wiki/publishing/github.io/
 
-#### summary
+summary
 - run pygbag_build from Action
 - set gh-pages to branch from Settings → pages
+
+#### pygbag_builder_set_page
+This is a command to set `gh-pages` to branch. It also uses GitHub API.
+Before using this command, you must check whether pygbag_build workflow is finished.(You can check it from Action)
+
+please use this command in your project folder
+```sh
+pygbag_builder_set_page
+```
 
 If you want to test on https://localhost:8000 before uploading your game, you can use this command.
 ```sh
 pygbag pygbag_builder_build
 ```
+
+
 
 ## License
 This project follows MIT. If you need more information, please look at `LICENSE`.

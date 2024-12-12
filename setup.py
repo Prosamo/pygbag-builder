@@ -6,9 +6,11 @@ setup(
     entry_points = {
         'console_scripts': [
             'pygbag_builder=pygbag_builder.main_flow:main',
+            'pygbag_builder_make_repo=pygbag_builder.make_repo:main',
+            'pygbag_builder_set_page=pygbag_builder.set_page:main'
         ],
     },
-    install_requires=['pygame', 'pygbag', 'astor'],
+    install_requires=['pygame', 'pygbag', 'astor', 'requests'],
     author='Prosamo',
     author_email='prosamo314@gmail.com',
     description='A module to support using pygbag',

@@ -20,33 +20,26 @@ def create_folders_and_files(directory):
     os.makedirs(github_workflows_path, exist_ok=True)
 
     # The content of pygbag.yml
-    yml_content = """name: Build and Deploy Pygbag
+    yml_content = """name: pygbag_build
+on: [workflow_dispatch]
 
-on:
-  push:
-    branches:
-      - main
 
 jobs:
-  build:
+  build-pygbag:
+    name: Build for Emscripten pygbag runtime
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pygbag
-
-      - name: Build with pygbag
-        run: |
-          pygbag build
+    - uses: actions/checkout@v3
+    - name: Checkout
+      run: |
+            python -m pip install pygbag
+            python -m pygbag --build $GITHUB_WORKSPACE/main.py
+    - name : "Upload to GitHub pages branch gh-pages"
+      uses: JamesIves/github-pages-deploy-action@4.1.7
+      with:
+        branch: gh-pages
+        folder: build/web
 """
 
     # Create the path for pygbag.yml (.github/workflows/pygbag.yml)
