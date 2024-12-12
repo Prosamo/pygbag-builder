@@ -170,11 +170,8 @@ These files are put in `pygbag_builder_build` folder which created in your proje
 #### pygbag_builder_make_repo
 This is a command to make repository automatically. **It uses GitHub API so you need GitHub token**. This command not only make repository but also runs workflow(pygbag_build).So, You Don't have to change settings. Instead, you have to get GitHub token with necessary permissions. You can get your token from Developer settings in Settings of your account.
 
-**>Personal access tokens**
-[Repository access]
-   Public Repositories (read-only)
-=> All repositories
-   Only select repositories
+##### Personal access tokens
+[Repository access] Select `All repositories`
 
 [Permissions]
 These permissions must be `Read and Write`
