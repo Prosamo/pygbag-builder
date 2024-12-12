@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 setup(
     name='pygbag_builder',
-    version='0.1',
+    version='0.1.3',
     packages=find_packages(),
     entry_points = {
         'console_scripts': [
-            'pygbag_builder=pygbag_builder.main_flow:main',
+            'pygbag_builder_main_flow=pygbag_builder.main_flow:main',
             'pygbag_builder_make_repo=pygbag_builder.make_repo:main',
             'pygbag_builder_set_page=pygbag_builder.set_page:main'
         ],

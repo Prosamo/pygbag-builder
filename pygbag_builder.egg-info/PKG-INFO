@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pygbag_builder
-Version: 0.1
+Version: 0.1.3
 Summary: A module to support using pygbag
 Home-page: https://github.com/prosamo/pygbag_builder
 Author: Prosamo
@@ -86,16 +86,16 @@ def loop():
 ```
 ### commands
 `pygbag_builder` offers these three commands
-- pygbag_builder
+- pygbag_builder_main_flow
 - pygbag_builder_make_repo
 - pygbag_builder_set_page
 
-#### pygbag_builder
+#### pygbag_builder_main_flow
 This is a command to create needed files for pygbag.
 
 please use this command in your project folder
 ```sh
-pygbag_builder
+pygbag_builder_main_flow
 ```
 
 By using this command, your python files are automatically modified like this.

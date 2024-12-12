@@ -1,6 +1,7 @@
 README.md
 setup.py
 pygbag_builder/__init__.py
+pygbag_builder/__main__.py
 pygbag_builder/insert_await.py
 pygbag_builder/insert_sleep.py
 pygbag_builder/main_flow.py

@@ -69,16 +69,16 @@ def loop():
 ```
 ### commands
 `pygbag_builder` offers these three commands
-- pygbag_builder
+- pygbag_builder_main_flow
 - pygbag_builder_make_repo
 - pygbag_builder_set_page
 
-#### pygbag_builder
+#### pygbag_builder_main_flow
 This is a command to create needed files for pygbag.
 
 please use this command in your project folder
 ```sh
-pygbag_builder
+python -m pygbag_builder main_flow
 ```
 
 By using this command, your python files are automatically modified like this.
@@ -167,7 +167,7 @@ These permissions must be `Read and Write`
 
 please use this command in your project folder
 ```sh
-pygbag_builder_make_repo
+python -m pygbag_builder make_repo
 ```
 :::note warn
 Depending on the timing of the process, sometimes the workflow may not execute properly, In that case, run this command again. You will get an error because the repository already exist, but no problem. Or you can run `pygbag_build` manually from Action.
@@ -187,7 +187,7 @@ Before using this command, you must check whether pygbag_build workflow is finis
 
 please use this command in your project folder
 ```sh
-pygbag_builder_set_page
+python -m pygbag_builder set_page
 ```
 
 If you want to test on https://localhost:8000 before uploading your game, you can use this command.
