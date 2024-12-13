@@ -1,4 +1,4 @@
 [console_scripts]
 pygbag_builder_main_flow = pygbag_builder.main_flow:main
 pygbag_builder_make_repo = pygbag_builder.make_repo:main
-pygbag_builder_set_page = pygbag_builder.set_page:main
+pygbag_builder_set_page = pygbagbuilder.set_page:_main

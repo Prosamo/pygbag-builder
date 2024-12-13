@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
-Name: pygbag_builder
-Version: 0.1.3
+Name: pygbag-builder
+Version: 0.1.5
 Summary: A module to support using pygbag
-Home-page: https://github.com/prosamo/pygbag_builder
+Home-page: https://github.com/prosamo/pygbag-builder
 Author: Prosamo
 Author-email: prosamo314@gmail.com
 Classifier: Programming Language :: Python :: 3
@@ -29,7 +29,7 @@ These points are not fatal probrem if there aren't many while loops. But when we
 ## Install
 
 ```sh
-pip install pygbag_builder
+pip install pygbag-builder
 ```
 
 ## How To
@@ -85,17 +85,17 @@ def loop():
         break
 ```
 ### commands
-`pygbag_builder` offers these three commands
-- pygbag_builder_main_flow
-- pygbag_builder_make_repo
-- pygbag_builder_set_page
+`pygbag-builder` offers these three commands
+- pygbag_builder main_flow
+- pygbag_builder make_repo
+- pygbag_builder set_page
 
-#### pygbag_builder_main_flow
+#### pygbag_builder main_flow
 This is a command to create needed files for pygbag.
 
 please use this command in your project folder
 ```sh
-pygbag_builder_main_flow
+python -m pygbag_builder main_flow
 ```
 
 By using this command, your python files are automatically modified like this.
@@ -167,7 +167,7 @@ Also, this command creates 'pygbag.yml'(.github/workflows/pygbag.yml)
 
 These files are put in `pygbag_builder_build` folder which created in your project folder.
 
-#### pygbag_builder_make_repo
+#### pygbag_builder make_repo
 This is a command to make repository automatically. **It uses GitHub API so you need GitHub token**. This command not only make repository but also runs workflow(pygbag_build).So, You Don't have to change settings. Instead, you have to get GitHub token with necessary permissions. You can get your token from Developer settings in Settings of your account.
 
 ##### Personal access tokens
@@ -184,7 +184,7 @@ These permissions must be `Read and Write`
 
 please use this command in your project folder
 ```sh
-pygbag_builder_make_repo
+python -m pygbag_builder make_repo
 ```
 :::note warn
 Depending on the timing of the process, sometimes the workflow may not execute properly, In that case, run this command again. You will get an error because the repository already exist, but no problem. Or you can run `pygbag_build` manually from Action.
@@ -198,13 +198,13 @@ summary
 - run pygbag_build from Action
 - set gh-pages to branch from Settings → pages
 
-#### pygbag_builder_set_page
+#### pygbag_builder set_page
 This is a command to set `gh-pages` to branch. It also uses GitHub API.
 Before using this command, you must check whether pygbag_build workflow is finished.(You can check it from Action)
 
 please use this command in your project folder
 ```sh
-pygbag_builder_set_page
+python -m pygbag_builder set_page
 ```
 
 If you want to test on https://localhost:8000 before uploading your game, you can use this command.

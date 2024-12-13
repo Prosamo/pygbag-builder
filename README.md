@@ -1,4 +1,4 @@
-# pygbag_builder
+# pygbag-builder
 This is a module to support people who want to make browser game with pygame. Normaly, pygame won't work on web browser but by using pygbag(wasm for pygame), we can publish pygame programs on the internet. 
 
 When we use pygbag, we should pay attention to some points.
@@ -12,7 +12,7 @@ These points are not fatal probrem if there aren't many while loops. But when we
 ## Install
 
 ```sh
-pip install pygbag_builder
+pip install pygbag-builder
 ```
 
 ## How To
@@ -68,12 +68,12 @@ def loop():
         break
 ```
 ### commands
-`pygbag_builder` offers these three commands
-- pygbag_builder_main_flow
-- pygbag_builder_make_repo
-- pygbag_builder_set_page
+`pygbag-builder` offers these three commands
+- pygbag_builder main_flow
+- pygbag_builder make_repo
+- pygbag_builder set_page
 
-#### pygbag_builder_main_flow
+#### pygbag_builder main_flow
 This is a command to create needed files for pygbag.
 
 please use this command in your project folder
@@ -150,7 +150,7 @@ Also, this command creates 'pygbag.yml'(.github/workflows/pygbag.yml)
 
 These files are put in `pygbag_builder_build` folder which created in your project folder.
 
-#### pygbag_builder_make_repo
+#### pygbag_builder make_repo
 This is a command to make repository automatically. **It uses GitHub API so you need GitHub token**. This command not only make repository but also runs workflow(pygbag_build).So, You Don't have to change settings. Instead, you have to get GitHub token with necessary permissions. You can get your token from Developer settings in Settings of your account.
 
 ##### Personal access tokens
@@ -181,7 +181,7 @@ summary
 - run pygbag_build from Action
 - set gh-pages to branch from Settings → pages
 
-#### pygbag_builder_set_page
+#### pygbag_builder set_page
 This is a command to set `gh-pages` to branch. It also uses GitHub API.
 Before using this command, you must check whether pygbag_build workflow is finished.(You can check it from Action)
 
